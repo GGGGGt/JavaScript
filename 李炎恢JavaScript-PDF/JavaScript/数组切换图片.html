@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				display: block;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var prev=document.getElementById("prev");
+				var next=document.getElementById("next");
+				var pic=document.getElementById("pic");
+				var n=['20qtzdtcrj','2fs9ux8die','2jlzwt8tus','38ks9ztcrc','4jlqc22crc'];
+				var a=0;
+				prev.onclick=function(){
+					if(a>0){
+					a=a-1;
+					
+					pic.src='image2/'+n[a]+'.jpg';
+					}else{
+						a=0;
+					}
+				}
+				
+				next.onclick=function(){
+					if(a<4){
+					a=a+1;
+					
+					pic.src='image2/'+n[a]+'.jpg';
+					}else{
+						a=4;
+					}
+				
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input type="button" id="prev" value="上一张">
+		<input type="button" id="next" value="下一张">
+		<img src="image2/20qtzdtcrj.jpg"  id="pic" alt="tttt"/>
+	</body>
+</html>

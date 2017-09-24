@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				margin-top: 20px;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var text=document.getElementById("text");
+				var btn=document.getElementById("btn");
+				var box=document.getElementById("box");
+				
+				btn.onclick=function(){
+					var val=text.value;
+					box.innerHTML=box.innerHTML+val;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text"  placeholder="请输入留言"/>
+		<input type="button" id="btn" value="click" />
+		<div id="box">nhvhnv</div>
+	</body>
+</html>

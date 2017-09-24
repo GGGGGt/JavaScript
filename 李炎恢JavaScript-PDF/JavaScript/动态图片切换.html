@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				display: block;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var prev=document.getElementById("prev");
+				var next=document.getElementById("next");
+				var pic=document.getElementById("pic");
+				var n=1;
+				
+				prev.onclick=function(){
+					if(n>1){
+					n=n-1;
+					
+					pic.src='image/'+n+'.jpg';
+					}else{
+						n=1;
+					}
+				}
+				
+				next.onclick=function(){
+					if(n<6){
+					n=n+1;
+					
+					pic.src='image/'+n+'.jpg';
+					}else{
+						n=6;
+					}
+				
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input type="button" id="prev" value="上一张">
+		<input type="button" id="next" value="下一张">
+		<img src="image/1.jpg"  id="pic" alt="tttt"/>
+	</body>
+</html>
